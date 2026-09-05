@@ -119,19 +119,25 @@ function App() {
   <div className="benefits-grid">
     <div className="benefit-item">
       <div className="benefit-icon">
-        <svg
-          viewBox="0 0 24 24"
-          width="28"
-          height="28"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M6 8v8M4 9v6M18 8v8M20 9v6M6 12h12" />
-        </svg>
-      </div>
+  <svg
+    viewBox="0 0 24 24"
+    width="28"
+    height="28"
+    fill="none"
+    strokeLinecap="round"
+  >
+    <path
+      d="M7 8v8M17 8v8M7 12h10"
+      stroke="#0b0f14"
+      strokeWidth="2"
+    />
+    <path
+      d="M4.5 9.5v5M19.5 9.5v5"
+      stroke="#12a978"
+      strokeWidth="2.6"
+    />
+  </svg>
+</div>
       <h3>trénink</h3>
       <p>Každý den víš, co a proč cvičíš.</p>
     </div>
@@ -148,7 +154,16 @@ function App() {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <path d="M13 2 5 14h6l-1 8 9-13h-6z" />
+<path
+  d="M13 2 5.5 13.5h5.8L10.5 22 18.5 10.5h-5.8L13 2Z"
+  stroke="#0b0f14"
+  strokeWidth="1.9"
+/>
+<path
+  d="M3.5 8.5h4M2.5 12h4.5M4 15.5h3"
+  stroke="#12a978"
+  strokeWidth="2.2"
+/>
         </svg>
       </div>
       <h3>Efektivita</h3>
@@ -157,22 +172,50 @@ function App() {
 
     <div className="benefit-item">
       <div className="benefit-icon">
-        <svg
-          viewBox="0 0 24 24"
-          width="28"
-          height="28"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="M20 7h-5V2" />
-          <path d="M4 17h5v5" />
-          <path d="M5.5 9a7 7 0 0 1 11.8-3L20 7" />
-          <path d="M18.5 15a7 7 0 0 1-11.8 3L4 17" />
-        </svg>
-      </div>
+  <svg
+    viewBox="0 0 24 24"
+    width="28"
+    height="28"
+    fill="none"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle
+      cx="12"
+      cy="10"
+      r="2.4"
+      fill="#0b0f14"
+      stroke="none"
+    />
+    <path
+      d="M8.8 17v-1.2c0-2 1.4-3.5 3.2-3.5s3.2 1.5 3.2 3.5V17"
+      fill="#0b0f14"
+      stroke="none"
+    />
+
+    <path
+      d="M5.5 8.5a7.2 7.2 0 0 1 11.7-3.2"
+      stroke="#12a978"
+      strokeWidth="2"
+    />
+    <path
+      d="m16.3 3.5 1.3 3-3.2-.4"
+      stroke="#12a978"
+      strokeWidth="2"
+    />
+
+    <path
+      d="M18.5 15.5a7.2 7.2 0 0 1-11.7 3.2"
+      stroke="#0b0f14"
+      strokeWidth="2"
+    />
+    <path
+      d="m7.7 20.5-1.3-3 3.2.4"
+      stroke="#0b0f14"
+      strokeWidth="2"
+    />
+  </svg>
+</div>
       <h3>Adaptace</h3>
       <p>Přizpůsobí se tvému výkonu i regeneraci.</p>
     </div>
