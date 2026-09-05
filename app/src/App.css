@@ -84,8 +84,10 @@
   width: 46px;
   height: 46px;
   border-radius: 14px;
-  background: #ffffff;
-  border: 1px solid #edf0f2;
+  background: linear-gradient(145deg, #f1fff9 0%, #e7fbf2 100%);
+  border: 1px solid #d7f4e8;
+  color: #12a978;
+  box-shadow: 0 8px 18px rgba(18, 169, 120, 0.10);
   font-size: 24px;
 }
 

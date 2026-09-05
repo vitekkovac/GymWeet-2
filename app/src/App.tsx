@@ -21,7 +21,22 @@ function App() {
       <section className="hero-card">
         <div className="feature-list">
           <div className="feature-item">
-            <div className="feature-icon">◎</div>
+<div className="feature-icon">
+  <svg
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <rect x="3" y="5" width="18" height="16" rx="3" />
+    <path d="M8 3v4M16 3v4M3 10h18" />
+    <path d="m8.5 15 2 2 5-5" />
+  </svg>
+</div>
             <div>
               <h2>Chytrý plán</h2>
               <p>Plán, který roste s tebou.</p>
@@ -29,7 +44,25 @@ function App() {
           </div>
 
           <div className="feature-item">
-            <div className="feature-icon">▥</div>
+            <div className="feature-icon">
+  <svg
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M4 19V13" />
+    <path d="M9 19V9" />
+    <path d="M14 19V12" />
+    <path d="M19 19V5" />
+    <path d="m4 10 5-4 5 2 5-5" />
+    <path d="m16 3 3 0 0 3" />
+  </svg>
+</div>
             <div>
               <h2>Měřitelné výsledky</h2>
               <p>Každý progres se počítá.</p>
@@ -37,7 +70,28 @@ function App() {
           </div>
 
           <div className="feature-item">
-            <div className="feature-icon">✦</div>
+            <div className="feature-icon">
+  <svg
+    viewBox="0 0 24 24"
+    width="24"
+    height="24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.8"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <circle cx="12" cy="12" r="3" />
+    <circle cx="5" cy="7" r="1.5" />
+    <circle cx="19" cy="7" r="1.5" />
+    <circle cx="5" cy="17" r="1.5" />
+    <circle cx="19" cy="17" r="1.5" />
+    <path d="M7 8.5 9.5 10" />
+    <path d="M17 8.5 14.5 10" />
+    <path d="M7 15.5 9.5 14" />
+    <path d="M17 15.5 14.5 14" />
+  </svg>
+</div>
             <div>
               <h2>AI trenér</h2>
               <p>Trenér, který je vždy s tebou.</p>
