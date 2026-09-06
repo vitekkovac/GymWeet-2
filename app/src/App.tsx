@@ -224,9 +224,11 @@ function App() {
 
 
       <div className="actions">
-        <button className="primary-button">Začít</button>
-        <button className="secondary-button">Přihlásit se</button>
-      </div>
+  <button className="primary-button">
+    <span>Začít</span>
+    <span className="button-arrow" aria-hidden="true">→</span>
+  </button>
+</div>
 
       <p className="legal">
         Pokračováním souhlasíš s <strong>Podmínkami použití</strong>
