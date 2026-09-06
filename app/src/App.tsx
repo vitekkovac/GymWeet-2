@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import heroImg from './assets/gymweet-hero.png'
-
-
+import slide2Img from './assets/onboarding-slide-2.png'
 function App() {
     const [page, setPage] = useState(1)
     const [touchStart, setTouchStart] = useState<number | null>(null)
@@ -26,27 +25,9 @@ const handleTouchEnd = (e: React.TouchEvent) => {
 
   setTouchStart(null)
 }
-      if (false && page === 2) {
-    return (
-      <main className="welcome-screen">
-        <section className="intro">
-          <h1>Plán, který se přizpůsobí tobě</h1>
-          <p>Trénink podle tvého cíle, času a vybavení.</p>
-        </section>
-        <div className="actions">
-  <button className="secondary-button">
-    Přihlásit se
-  </button>
-</div>
-      </main>
-    )
-  }
+    
   return (
-   <main
-  className="welcome-screen"
-  onTouchStart={handleTouchStart}
-  onTouchEnd={handleTouchEnd}
->
+  <main className="welcome-screen">
       <header className="brand">
         <div className="brand-logo"></div>
         <p className="brand-tagline"></p>
@@ -66,6 +47,7 @@ const handleTouchEnd = (e: React.TouchEvent) => {
   onTouchEnd={handleTouchEnd}
 >
   
+      {page === 1 && (
       <section className="hero-card">
         <div className="feature-list">
           <div className="feature-item">
@@ -153,7 +135,16 @@ const handleTouchEnd = (e: React.TouchEvent) => {
   alt="GYMWEET atlet"
 />
       </section>
-
+)}
+{page === 2 && (
+  <section className="slide-image-wrap">
+    <img
+      src={slide2Img}
+      className="slide-image"
+      alt="GYMWEET slide 2"
+    />
+  </section>
+)}
       <div className="carousel-dots" aria-label="Onboarding 1 ze 4">
         <span className={page === 1 ? 'dot active' : 'dot'} />
        <span className={page === 2 ? 'dot active' : 'dot'} />
