@@ -1,10 +1,52 @@
+import { useState } from 'react'
 import './App.css'
 import heroImg from './assets/gymweet-hero.png'
 
 
 function App() {
+    const [page, setPage] = useState(1)
+    const [touchStart, setTouchStart] = useState<number | null>(null)
+    const handleTouchStart = (e: React.TouchEvent) => {
+  setTouchStart(e.touches[0].clientX)
+}
+
+const handleTouchEnd = (e: React.TouchEvent) => {
+  if (touchStart === null) return
+
+  const touchEnd = e.changedTouches[0].clientX
+  const distance = touchStart - touchEnd
+
+  if (distance > 50 && page < 4) {
+    setPage(page + 1)
+  }
+
+  if (distance < -50 && page > 1) {
+    setPage(page - 1)
+  }
+
+  setTouchStart(null)
+}
+      if (false && page === 2) {
+    return (
+      <main className="welcome-screen">
+        <section className="intro">
+          <h1>Plán, který se přizpůsobí tobě</h1>
+          <p>Trénink podle tvého cíle, času a vybavení.</p>
+        </section>
+        <div className="actions">
+  <button className="secondary-button">
+    Přihlásit se
+  </button>
+</div>
+      </main>
+    )
+  }
   return (
-    <main className="welcome-screen">
+   <main
+  className="welcome-screen"
+  onTouchStart={handleTouchStart}
+  onTouchEnd={handleTouchEnd}
+>
       <header className="brand">
         <div className="brand-logo"></div>
         <p className="brand-tagline"></p>
@@ -18,6 +60,12 @@ function App() {
         </p>
       </section>
 
+      <div
+  className="slider"
+  onTouchStart={handleTouchStart}
+  onTouchEnd={handleTouchEnd}
+>
+  
       <section className="hero-card">
         <div className="feature-list">
           <div className="feature-item">
@@ -107,10 +155,11 @@ function App() {
       </section>
 
       <div className="carousel-dots" aria-label="Onboarding 1 ze 4">
-        <span className="dot active" />
+        <span className={page === 1 ? 'dot active' : 'dot'} />
+       <span className={page === 2 ? 'dot active' : 'dot'} />
+        <span className={page === 3 ? 'dot active' : 'dot'} />
         <span className="dot" />
-        <span className="dot" />
-        <span className="dot" />
+      </div>
       </div>
 
 <section className="benefits-card">
@@ -224,7 +273,10 @@ function App() {
 
 
       <div className="actions">
-  <button className="primary-button">
+  <button
+  className="primary-button"
+  onClick={() => setPage(2)}
+>
     <span>Začít</span>
     <span className="button-arrow" aria-hidden="true">→</span>
   </button>
