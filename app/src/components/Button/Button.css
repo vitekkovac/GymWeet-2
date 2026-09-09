@@ -41,7 +41,7 @@
 
 .gw-button--destructive {
   background: var(--gw-state-error);
-  color: var(--gw-c09);
+  color: var(--gw-pure-white);
 }
 
 .gw-button:disabled {

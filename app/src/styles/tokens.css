@@ -35,3 +35,37 @@
   --color-brand-accent: var(--gw-sage);
   --color-border-accent: var(--gw-sage);
 }
+:root {
+  /* Spacing */
+  --gw-space-1: 4px;
+  --gw-space-2: 8px;
+  --gw-space-3: 12px;
+  --gw-space-4: 16px;
+  --gw-space-5: 20px;
+  --gw-space-6: 24px;
+  --gw-space-8: 32px;
+  --gw-space-10: 40px;
+  --gw-space-12: 48px;
+  --gw-space-16: 64px;
+
+  /* Radius */
+  --gw-radius-sm: 10px;
+  --gw-radius-md: 14px;
+  --gw-radius-lg: 18px;
+  --gw-radius-xl: 24px;
+  --gw-radius-full: 999px;
+
+  /* Semantic aliases for components */
+  --gw-bg-primary: var(--color-bg-primary);
+  --gw-bg-secondary: var(--color-bg-secondary);
+  --gw-surface-primary: var(--color-surface-primary);
+  --gw-surface-secondary: var(--color-surface-secondary);
+  --gw-text-primary: var(--color-text-primary);
+  --gw-text-secondary: var(--color-text-secondary);
+  --gw-brand-primary: var(--color-brand-primary);
+  --gw-brand-accent: var(--color-brand-accent);
+  --gw-border-default: var(--color-border-accent);
+
+  /* States */
+  --gw-state-error: #B95C5C;
+}
