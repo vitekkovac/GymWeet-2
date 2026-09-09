@@ -1,0 +1,106 @@
+   .gw-toast {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--gw-border-primary);
+  border-radius: var(--gw-radius-md, 14px);
+  background: var(--gw-surface-primary);
+  color: var(--gw-text-primary);
+}
+
+.gw-toast__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.gw-toast__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.gw-toast__title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.gw-toast__message {
+  color: var(--gw-text-secondary);
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.gw-toast__close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  margin: -4px -6px -4px 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--gw-text-secondary);
+  font: inherit;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.gw-toast__close:hover {
+  background: var(--gw-surface-secondary);
+}
+
+.gw-toast__close:focus-visible {
+  outline: 2px solid var(--gw-brand-accent);
+  outline-offset: 2px;
+}
+
+.gw-toast--success {
+  border-color: var(--gw-state-success, var(--gw-brand-primary));
+}
+
+.gw-toast--success .gw-toast__icon {
+  background: var(--gw-state-success, var(--gw-brand-primary));
+  color: var(--gw-off-white);
+}
+
+.gw-toast--warning {
+  border-color: var(--gw-state-warning, var(--gw-brand-accent));
+}
+
+.gw-toast--warning .gw-toast__icon {
+  background: var(--gw-state-warning, var(--gw-brand-accent));
+  color: var(--gw-text-primary);
+}
+
+.gw-toast--error {
+  border-color: var(--gw-state-error, var(--gw-brand-primary));
+}
+
+.gw-toast--error .gw-toast__icon {
+  background: var(--gw-state-error, var(--gw-brand-primary));
+  color: var(--gw-off-white);
+}
+
+.gw-toast--info {
+  border-color: var(--gw-state-info, var(--gw-border-primary));
+}
+
+.gw-toast--info .gw-toast__icon {
+  background: var(--gw-surface-secondary);
+  color: var(--gw-text-primary);
+}
