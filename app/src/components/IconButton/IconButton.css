@@ -1,0 +1,99 @@
+   .gw-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+
+  border: 1px solid transparent;
+  border-radius: var(--gw-radius-md);
+
+  font: inherit;
+  cursor: pointer;
+
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    transform 120ms ease;
+}
+
+.gw-icon-button:active:not(:disabled) {
+  transform: scale(0.96);
+}
+
+.gw-icon-button:focus-visible {
+  outline: 2px solid var(--gw-brand-accent);
+  outline-offset: 2px;
+}
+
+.gw-icon-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+/* Sizes */
+
+.gw-icon-button--sm {
+  width: 44px;
+  height: 44px;
+}
+
+.gw-icon-button--md {
+  width: 48px;
+  height: 48px;
+}
+
+.gw-icon-button--lg {
+  width: 52px;
+  height: 52px;
+}
+
+/* Variants */
+
+.gw-icon-button--primary {
+  background: var(--gw-brand-primary);
+  color: var(--gw-text-on-brand);
+}
+
+.gw-icon-button--secondary {
+  background: var(--gw-surface-secondary);
+  color: var(--gw-text-primary);
+  border-color: var(--gw-border-subtle);
+}
+
+.gw-icon-button--ghost {
+  background: transparent;
+  color: var(--gw-text-primary);
+}
+
+.gw-icon-button--destructive {
+  background: var(--gw-state-error);
+  color: var(--gw-text-on-brand);
+}
+
+/* Icon */
+
+.gw-icon-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+}
+
+.gw-icon-button__icon > svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .gw-icon-button {
+    transition: none;
+  }
+}
