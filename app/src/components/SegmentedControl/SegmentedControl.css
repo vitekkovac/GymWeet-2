@@ -1,0 +1,47 @@
+   .gw-segmented-control {
+  display: inline-flex;
+  width: 100%;
+  padding: var(--gw-space-4);
+  border: 1px solid var(--gw-border-subtle);
+  border-radius: var(--gw-radius-14);
+  background: var(--gw-surface-secondary);
+}
+
+.gw-segmented-control__option {
+  min-height: var(--gw-touch-target);
+  flex: 1;
+  padding: var(--gw-space-8) var(--gw-space-12);
+  border: 0;
+  border-radius: var(--gw-radius-10);
+  background: transparent;
+  color: var(--gw-text-secondary);
+  font: inherit;
+  font-size: var(--gw-font-size-sm);
+  font-weight: var(--gw-font-weight-medium);
+  cursor: pointer;
+  transition:
+    background var(--gw-motion-fast) ease,
+    color var(--gw-motion-fast) ease,
+    opacity var(--gw-motion-fast) ease;
+}
+
+.gw-segmented-control__option--active {
+  background: var(--gw-surface-primary);
+  color: var(--gw-text-primary);
+}
+
+.gw-segmented-control__option:focus-visible {
+  outline: 2px solid var(--gw-focus);
+  outline-offset: 2px;
+}
+
+.gw-segmented-control__option:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gw-segmented-control__option {
+    transition: none;
+  }
+}
