@@ -11,3 +11,27 @@
   --gw-pure-white: #FFFFFF;
   --gw-pure-black: #000000;
 }
+     /* Semantic colors — Dark */
+[data-theme="dark"] {
+  --color-bg-primary: var(--gw-black);
+  --color-bg-secondary: var(--gw-graphite);
+  --color-surface-primary: var(--gw-graphite);
+  --color-surface-secondary: var(--gw-forest);
+  --color-text-primary: var(--gw-off-white);
+  --color-text-secondary: var(--gw-warm-sand);
+  --color-brand-primary: var(--gw-brand-green);
+  --color-brand-accent: var(--gw-athletic-mint);
+  --color-border-accent: var(--gw-sage);
+}
+   /* Semantic colors — Light */
+[data-theme="light"] {
+  --color-bg-primary: var(--gw-off-white);
+  --color-bg-secondary: var(--gw-pure-white);
+  --color-surface-primary: var(--gw-pure-white);
+  --color-surface-secondary: var(--gw-off-white);
+  --color-text-primary: var(--gw-black);
+  --color-text-secondary: var(--gw-forest);
+  --color-brand-primary: var(--gw-brand-green);
+  --color-brand-accent: var(--gw-sage);
+  --color-border-accent: var(--gw-sage);
+}
