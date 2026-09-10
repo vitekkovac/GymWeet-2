@@ -36,16 +36,20 @@ const handleTouchEnd = (e: React.TouchEvent) => {
 
       <section className="intro">
   <h1>
-    {page === 2
-      ? 'Plán, který se přizpůsobí tobě'
+  {page === 2
+    ? 'Plán, který se přizpůsobí tobě'
+    : page === 3
+      ? 'Sleduj progres, který tě posouvá dál'
       : 'Vítej v GYMWEET'}
-  </h1>
+</h1>
 
-  <p>
-    {page === 2
-      ? 'Chytrý trénink, který reaguje na tvoje možnosti.'
+<p>
+  {page === 2
+    ? 'Chytrý trénink, který reaguje na tvoje možnosti.'
+    : page === 3
+      ? 'Měj svůj výkon, rekordy a výsledky přehledně na jednom místě.'
       : 'Tvůj plán. Tvůj progres. Tvoje tempo.'}
-  </p>
+</p>
 </section>
 
       <div
@@ -179,6 +183,45 @@ const handleTouchEnd = (e: React.TouchEvent) => {
 
     <div className="slide-two-phone" aria-label="Náhled obrazovky Dnes">
       <strong>Dnes</strong>
+    </div>
+  </section>
+)}
+{page === 3 && (
+  <section className="hero-card slide-two">
+    <div className="feature-list">
+      <div className="feature-item">
+        <div className="feature-icon" aria-hidden="true">
+          ↗
+        </div>
+        <div>
+          <h2>Detailní statistiky</h2>
+          <p>Sleduj svůj výkon a vývoj v čase.</p>
+        </div>
+      </div>
+
+      <div className="feature-item">
+        <div className="feature-icon" aria-hidden="true">
+          ★
+        </div>
+        <div>
+          <h2>Osobní rekordy</h2>
+          <p>Každý nový rekord máš přehledně uložený.</p>
+        </div>
+      </div>
+
+      <div className="feature-item">
+        <div className="feature-icon" aria-hidden="true">
+          ✓
+        </div>
+        <div>
+          <h2>Historie a cíle</h2>
+          <p>Vidíš své tréninky i cestu k dalšímu cíli.</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="slide-two-phone" aria-label="Náhled obrazovky Progres">
+      <strong>Progres</strong>
     </div>
   </section>
 )}
