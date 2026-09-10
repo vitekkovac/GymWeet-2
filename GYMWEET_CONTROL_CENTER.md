@@ -41,6 +41,23 @@ Hotovo:
 - po opravě: 0 chybějících `--gw-*` tokenů
 - build: ✅ PASS
 - lint: ✅ 0 warnings / 0 errors
+### Dark / Light theme foundation
+
+Hotovo:
+
+- `app/src/app/theme.ts`
+- `app/src/main.tsx` inicializuje theme při startu
+- `app/src/index.css` používá semantic theme tokeny
+- `data-theme="light"` / `data-theme="dark"` funguje
+- výchozí theme: Light
+- změna theme se ukládá do `localStorage`
+- uložený Dark theme přežije reload
+- uložený Light theme přežije reload
+- globální pozadí a text reagují na theme
+- build: ✅ PASS
+- lint: ✅ 0 warnings / 0 errors
+- runtime Light test: ✅ PASS
+- runtime Dark test: ✅ PASS
 ### UI component foundation
 
 Hotovo:
@@ -108,7 +125,20 @@ Aktuální hlavní routy:
 ---
 
 ## ✅ POSLEDNÍ COMMITY
+### Dark / Light theme foundation
 
+`59ca05c`
+
+`Add dark and light theme foundation`
+
+Ověřeno:
+- Light startup: ✅ PASS
+- Light → Dark: ✅ PASS
+- Dark persistence after reload: ✅ PASS
+- Dark → Light: ✅ PASS
+- Light persistence after reload: ✅ PASS
+- build: ✅ PASS
+- lint: ✅ PASS
 ### Scope foundation
 
 `a731bb3`
@@ -221,13 +251,14 @@ PHASE 0 — FOUNDATION
 
 Další krok:
 
-Dark / Light theme foundation
+Phase 0 completion audit
 
-Ověřit a dokončit:
-- aktivaci `data-theme`
-- výchozí theme při startu aplikace
-- správné použití semantic Dark / Light tokenů
-- bez zásahu do již hotových komponent
+Cíl:
+- projít skutečný stav foundation proti repozitáři
+- najít pouze dosud nedokončené foundation části
+- nic z již dokončených checkpointů neopakovat
+- ověřit případné zbytky starter struktury
+- určit přesně, co ještě zbývá do uzavření Phase 0
 
 ---
 
