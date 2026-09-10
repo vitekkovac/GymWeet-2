@@ -27,7 +27,51 @@ Projekt je v čistém a funkčním stavu.
 ---
 
 ## ✅ DOKONČENÉ CHECKPOINTY
+### Design system foundation
 
+Hotovo:
+
+- `app/src/styles/tokens.css`
+- primitive color tokens
+- semantic design tokens
+- design tokens připojené k aplikaci
+- základní komponenty sjednocené s design tokeny
+
+### UI component foundation
+
+Hotovo:
+
+- Button
+- Input
+- Card
+- Chip
+- Toggle
+- Progress
+- Toast
+- Alert
+- Loading
+- Skeleton
+- IconButton
+- ListRow
+- SectionHeader
+- Divider
+- BottomNavigation
+- SegmentedControl
+- Modal
+
+Komponenty jsou uložené v:
+
+`app/src/components/`
+
+### Runtime / config foundation
+
+Hotovo:
+
+- `app/src/app/errors/AppErrorBoundary.tsx`
+- `app/src/config/env.ts`
+- Error Boundary je připojený k aplikaci
+- RouterProvider je připojený k aplikaci
+- design tokens jsou načítané při startu aplikace
 ### Domain foundation
 
 Hotovo:
