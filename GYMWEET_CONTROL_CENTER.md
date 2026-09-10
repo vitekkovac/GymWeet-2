@@ -6,8 +6,9 @@
 ---
 
 ## 📍 AKTUÁLNÍ FÁZE
+PHASE 0 — FOUNDATION ✅ DOKONČENA
 
-PHASE 0 — FOUNDATION
+Final audit: ✅ PASS
 
 Aktuální Git branch:
 
@@ -247,18 +248,27 @@ Nevymýšlet novou strukturu jen proto, že začal nový chat.
 
 ## ➡️ DALŠÍ KROK
 
-PHASE 0 — FOUNDATION
+PHASE 0 — FOUNDATION ✅ DOKONČENA
 
-Další krok:
+Final audit ověřil:
 
-Phase 0 completion audit
+- žádné prázdné source soubory
+- žádné TODO / FIXME / HACK / XXX v source
+- žádné staré Vite / starter reference
+- nepoužívané starter a legacy soubory odstraněny
+- package identity: `gymweet@0.1.0`
+- Dark / Light foundation funkční
+- build: ✅ PASS
+- lint: ✅ 0 warnings / 0 errors
+- Git working tree: ✅ CLEAN
 
-Cíl:
-- projít skutečný stav foundation proti repozitáři
-- najít pouze dosud nedokončené foundation části
-- nic z již dokončených checkpointů neopakovat
-- ověřit případné zbytky starter struktury
-- určit přesně, co ještě zbývá do uzavření Phase 0
+Další postup:
+
+1. uložit tento finální Phase 0 checkpoint
+2. pushnout ho na GitHub
+3. sloučit `phase-0-foundation` do `main`
+4. vytvořit novou vývojovou branch pro START / ONBOARDING
+5. začít implementací `A01 — Vítej v GYMWEET`
 
 ---
 
