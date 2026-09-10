@@ -3,7 +3,7 @@
   padding: var(--gw-space-5);
   background: var(--gw-surface-primary);
   color: var(--gw-text-primary);
-  border: 1px solid var(--gw-border-default);
+  border: var(--gw-stroke-thin) solid var(--gw-border-default);
   border-radius: var(--gw-radius-lg);
 }
 
@@ -24,8 +24,8 @@
 }
 
 .gw-card--interactive:focus-visible {
-  outline: 2px solid var(--gw-brand-accent);
-  outline-offset: 2px;
+  outline: var(--gw-focus-width) solid var(--gw-brand-accent);
+  outline-offset: var(--gw-focus-width);
 }
 
 .gw-card--highlight {
@@ -34,7 +34,7 @@
 }
 
 .gw-card--status {
-  border-left: 3px solid var(--gw-brand-primary);
+  border-left: var(--gw-stroke-strong) solid var(--gw-brand-primary);
 }
 
 .gw-card--workout {

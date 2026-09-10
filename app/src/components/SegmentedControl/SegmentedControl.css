@@ -10,7 +10,7 @@
 .gw-segmented-control__option {
   min-height: var(--gw-touch-target);
   flex: 1;
-  padding: var(--gw-space-8) var(--gw-space-12);
+  padding: var(--gw-space-8) var(--gw-space-3);
   border: 0;
   border-radius: var(--gw-radius-10);
   background: transparent;

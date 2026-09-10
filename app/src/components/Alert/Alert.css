@@ -1,9 +1,9 @@
    .gw-alert {
   display: flex;
   align-items: flex-start;
-  gap: var(--gw-space-12);
+  gap: var(--gw-space-3);
   width: 100%;
-  padding: var(--gw-space-16);
+  padding: var(--gw-space-4);
   border: 1px solid var(--gw-border-subtle);
   border-radius: var(--gw-radius-md);
   background: var(--gw-surface-primary);
@@ -43,7 +43,7 @@
 }
 
 .gw-alert__action {
-  margin-top: var(--gw-space-12);
+  margin-top: var(--gw-space-3);
 }
 
 .gw-alert--success {

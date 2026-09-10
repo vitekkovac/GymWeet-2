@@ -2,7 +2,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: var(--gw-space-16);
+  gap: var(--gw-space-4);
   width: 100%;
 }
 
@@ -37,6 +37,6 @@
 
 @media (max-width: 480px) {
   .gw-section-header {
-    gap: var(--gw-space-12);
+    gap: var(--gw-space-3);
   }
 }

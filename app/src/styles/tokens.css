@@ -54,7 +54,15 @@
   --gw-radius-lg: 18px;
   --gw-radius-xl: 24px;
   --gw-radius-full: 999px;
-
+    /* Component dimensions */
+  --gw-control-sm: 44px;
+  --gw-control-md: 48px;
+  --gw-control-lg: 52px;
+  --gw-icon-md: 24px;
+  --gw-stroke-thin: 1px;
+     --gw-stroke-strong: 3px;
+  --gw-focus-width: 2px;
+  --gw-zero: 0px;
   /* Semantic aliases for components */
   --gw-bg-primary: var(--color-bg-primary);
   --gw-bg-secondary: var(--color-bg-secondary);
