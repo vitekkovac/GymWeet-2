@@ -1,0 +1,83 @@
+   .gw-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--gw-space-3);
+  width: 100%;
+  padding: var(--gw-space-4);
+  border: 1px solid var(--gw-border-subtle);
+  border-radius: var(--gw-radius-md);
+  background: var(--gw-surface-primary);
+  color: var(--gw-text-primary);
+}
+
+.gw-alert__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.gw-alert__content {
+  min-width: 0;
+  flex: 1;
+}
+
+.gw-alert__title {
+  display: block;
+  margin-bottom: var(--gw-space-4);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.gw-alert__message {
+  color: var(--gw-text-secondary);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.gw-alert__action {
+  margin-top: var(--gw-space-3);
+}
+
+.gw-alert--success {
+  border-color: var(--gw-state-success);
+}
+
+.gw-alert--success .gw-alert__icon {
+  background: var(--gw-state-success);
+  color: var(--gw-off-white);
+}
+
+.gw-alert--warning {
+  border-color: var(--gw-state-warning);
+}
+
+.gw-alert--warning .gw-alert__icon {
+  background: var(--gw-state-warning);
+  color: var(--gw-black);
+}
+
+.gw-alert--error {
+  border-color: var(--gw-state-error);
+}
+
+.gw-alert--error .gw-alert__icon {
+  background: var(--gw-state-error);
+  color: var(--gw-off-white);
+}
+
+.gw-alert--info {
+  border-color: var(--gw-state-info);
+}
+
+.gw-alert--info .gw-alert__icon {
+  background: var(--gw-state-info);
+  color: var(--gw-off-white);
+}

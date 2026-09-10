@@ -1,0 +1,83 @@
+  .gw-input-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gw-space-2);
+  width: 100%;
+}
+
+.gw-input-field__label {
+  color: var(--gw-text-primary);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.gw-input-field__control {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: var(--gw-space-2);
+  padding: 0 var(--gw-space-4);
+  background: var(--gw-surface-primary);
+  border: 1px solid var(--gw-border-default);
+  border-radius: var(--gw-radius-md);
+  transition:
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.gw-input-field__control:focus-within {
+  border-color: var(--gw-brand-accent);
+}
+
+.gw-input-field__control--error {
+  border-color: var(--gw-state-error);
+}
+
+.gw-input-field__control--disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.gw-input-field__control--readonly {
+  background: var(--gw-surface-secondary);
+}
+
+.gw-input-field__input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--gw-text-primary);
+  font: inherit;
+}
+
+.gw-input-field__input::placeholder {
+  color: var(--gw-text-secondary);
+}
+
+.gw-input-field__leading,
+.gw-input-field__trailing,
+.gw-input-field__unit {
+  display: inline-flex;
+  align-items: center;
+  color: var(--gw-text-secondary);
+  flex-shrink: 0;
+}
+
+.gw-input-field__unit {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.gw-input-field__message {
+  color: var(--gw-text-secondary);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.gw-input-field__message--error {
+  color: var(--gw-state-error);
+}

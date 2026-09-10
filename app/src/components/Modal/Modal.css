@@ -1,0 +1,124 @@
+   .gw-modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--gw-z-modal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gw-space-4);
+}
+
+.gw-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: rgb(0 0 0 / 60%);
+  cursor: default;
+}
+
+.gw-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 32rem);
+  max-height: calc(100dvh - (var(--gw-space-4) * 2));
+  overflow-y: auto;
+  background: var(--gw-surface);
+  color: var(--gw-text-primary);
+  border: 1px solid var(--gw-border);
+  border-radius: var(--gw-radius-lg);
+  box-shadow: var(--gw-shadow-lg);
+}
+
+.gw-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gw-space-4);
+  padding: var(--gw-space-5);
+}
+
+.gw-modal__heading {
+  min-width: 0;
+}
+
+.gw-modal__title {
+  margin: 0;
+  color: var(--gw-text-primary);
+  font-size: var(--gw-font-size-lg);
+  font-weight: var(--gw-font-weight-semibold);
+  line-height: var(--gw-line-height-tight);
+}
+
+.gw-modal__description {
+  margin: var(--gw-space-2) 0 0;
+  color: var(--gw-text-secondary);
+  font-size: var(--gw-font-size-sm);
+  line-height: var(--gw-line-height-normal);
+}
+
+.gw-modal__close {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: var(--gw-touch-min);
+  height: var(--gw-touch-min);
+  padding: 0;
+  border: 0;
+  border-radius: var(--gw-radius-md);
+  background: transparent;
+  color: var(--gw-text-secondary);
+  font: inherit;
+  font-size: var(--gw-font-size-xl);
+  cursor: pointer;
+  transition:
+    background-color var(--gw-motion-fast) ease,
+    color var(--gw-motion-fast) ease;
+}
+
+.gw-modal__close:hover {
+  background: var(--gw-surface-hover);
+  color: var(--gw-text-primary);
+}
+
+.gw-modal__close:focus-visible {
+  outline: 2px solid var(--gw-focus);
+  outline-offset: 2px;
+}
+
+.gw-modal__content {
+  padding: 0 var(--gw-space-5) var(--gw-space-5);
+}
+
+.gw-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--gw-space-3);
+  padding: var(--gw-space-4) var(--gw-space-5);
+  border-top: 1px solid var(--gw-border);
+}
+
+@media (max-width: 40rem) {
+  .gw-modal {
+    align-items: flex-end;
+    padding:
+      var(--gw-space-4)
+      var(--gw-space-4)
+      max(var(--gw-space-4), env(safe-area-inset-bottom));
+  }
+
+  .gw-modal__panel {
+    width: 100%;
+    max-height: calc(100dvh - var(--gw-space-8));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gw-modal__close {
+    transition: none;
+  }
+}

@@ -1,0 +1,44 @@
+   .gw-loading {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gw-text-secondary);
+}
+
+.gw-loading__spinner {
+  border: 3px solid var(--gw-border);
+  border-top-color: var(--gw-brand-primary);
+  border-radius: 999px;
+  animation: gw-loading-spin 0.8s linear infinite;
+}
+
+.gw-loading__label {
+  font-size: 14px;
+}
+
+.gw-loading--sm .gw-loading__spinner {
+  width: 16px;
+  height: 16px;
+}
+
+.gw-loading--md .gw-loading__spinner {
+  width: 24px;
+  height: 24px;
+}
+
+.gw-loading--lg .gw-loading__spinner {
+  width: 36px;
+  height: 36px;
+}
+
+@keyframes gw-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gw-loading__spinner {
+    animation: none;
+  }
+}

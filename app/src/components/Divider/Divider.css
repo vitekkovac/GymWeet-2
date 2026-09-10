@@ -1,0 +1,17 @@
+   .gw-divider {
+  flex-shrink: 0;
+  margin: 0;
+  border: 0;
+  background: var(--gw-border-subtle);
+}
+
+.gw-divider--horizontal {
+  width: 100%;
+  height: var(--gw-stroke-thin);
+}
+
+.gw-divider--vertical {
+  align-self: stretch;
+  width: var(--gw-stroke-thin);
+  min-height: var(--gw-space-6);
+}

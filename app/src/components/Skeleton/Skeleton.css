@@ -1,0 +1,50 @@
+   .gw-skeleton {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: var(--gw-surface-secondary);
+}
+
+.gw-skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  animation: gw-skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+.gw-skeleton--text {
+  width: 100%;
+  height: 16px;
+  border-radius: var(--gw-radius-sm, 6px);
+}
+
+.gw-skeleton--rectangular {
+  width: 100%;
+  min-height: 80px;
+  border-radius: var(--gw-radius-md, 14px);
+}
+
+.gw-skeleton--circular {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+}
+
+@keyframes gw-skeleton-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gw-skeleton::after {
+    animation: none;
+  }
+}
