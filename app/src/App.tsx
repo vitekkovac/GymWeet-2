@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './App.css'
 import heroImg from './assets/gymweet-hero.png'
-import slide2Img from './assets/onboarding-slide-2.png'
 function App() {
   const navigate = useNavigate()
 const [page, setPage] = useState(1)
@@ -36,12 +35,18 @@ const handleTouchEnd = (e: React.TouchEvent) => {
       </header>
 
       <section className="intro">
-        <h1>Vítej v GYMWEET</h1>
-        <p>
-         Tvůj plán. Tvůj progres. Tvoje tempo.
-      
-        </p>
-      </section>
+  <h1>
+    {page === 2
+      ? 'Plán, který se přizpůsobí tobě'
+      : 'Vítej v GYMWEET'}
+  </h1>
+
+  <p>
+    {page === 2
+      ? 'Chytrý trénink, který reaguje na tvoje možnosti.'
+      : 'Tvůj plán. Tvůj progres. Tvoje tempo.'}
+  </p>
+</section>
 
       <div
   className="slider"
@@ -139,12 +144,42 @@ const handleTouchEnd = (e: React.TouchEvent) => {
       </section>
 )}
 {page === 2 && (
-  <section className="slide-image-wrap">
-    <img
-      src={slide2Img}
-      className="slide-image"
-      alt="GYMWEET slide 2"
-    />
+  <section className="hero-card slide-two">
+    <div className="feature-list">
+      <div className="feature-item">
+        <div className="feature-icon" aria-hidden="true">
+          ↻
+        </div>
+        <div>
+          <h2>Adaptivní plán</h2>
+          <p>Plán se přizpůsobí tvému výkonu a regeneraci.</p>
+        </div>
+      </div>
+
+      <div className="feature-item">
+        <div className="feature-icon" aria-hidden="true">
+          ⇄
+        </div>
+        <div>
+          <h2>Chytré náhrady</h2>
+          <p>Nemůžeš cvik odjet? GYMWEET nabídne vhodnou alternativu.</p>
+        </div>
+      </div>
+
+      <div className="feature-item">
+        <div className="feature-icon" aria-hidden="true">
+          ✓
+        </div>
+        <div>
+          <h2>Efektivní trénink</h2>
+          <p>Každý trénink má jasný směr a cíl.</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="slide-two-phone" aria-label="Náhled obrazovky Dnes">
+      <strong>Dnes</strong>
+    </div>
   </section>
 )}
       <div className="carousel-dots" aria-label="Onboarding 1 ze 4">
