@@ -77,3 +77,49 @@
   /* States */
   --gw-state-error: #B95C5C;
 }
+/* GYMWEET — component foundation tokens */
+:root {
+  /* Semantic aliases */
+  --gw-accent-primary: var(--gw-brand-accent);
+  --gw-border: var(--gw-border-default);
+  --gw-border-primary: var(--gw-border-default);
+  --gw-border-strong: var(--gw-brand-primary);
+  --gw-border-subtle: var(--gw-border-default);
+  --gw-focus: var(--gw-brand-accent);
+  --gw-surface: var(--gw-surface-primary);
+  --gw-surface-hover: var(--gw-surface-secondary);
+  --gw-text-on-brand: var(--gw-pure-white);
+
+  /* Typography */
+  --gw-font-size-xs: 12px;
+  --gw-font-size-sm: 14px;
+  --gw-font-size-lg: 18px;
+  --gw-font-size-xl: 24px;
+  --gw-font-weight-medium: 500;
+  --gw-font-weight-semibold: 600;
+  --gw-line-height-tight: 1.2;
+  --gw-line-height-normal: 1.5;
+
+  /* Motion */
+  --gw-motion-fast: 180ms;
+
+  /* Radius compatibility */
+  --gw-radius-10: var(--gw-radius-sm);
+  --gw-radius-14: var(--gw-radius-md);
+
+  /* Elevation */
+  --gw-shadow-lg: 0 12px 32px rgb(0 0 0 / 18%);
+
+
+  /* States */
+  --gw-state-info: #5C7FA3;
+  --gw-state-success: var(--gw-sage);
+  --gw-state-warning: #B58A45;
+
+  /* Touch targets */
+  --gw-touch-min: 44px;
+  --gw-touch-target: 48px;
+
+  /* Layers */
+  --gw-z-modal: 1000;
+}
