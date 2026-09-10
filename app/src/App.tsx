@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './App.css'
 import heroImg from './assets/gymweet-hero.png'
 import slide2Img from './assets/onboarding-slide-2.png'
 function App() {
-    const [page, setPage] = useState(1)
+  const navigate = useNavigate()
+const [page, setPage] = useState(1)
     const [touchStart, setTouchStart] = useState<number | null>(null)
     const handleTouchStart = (e: React.TouchEvent) => {
   setTouchStart(e.touches[0].clientX)
@@ -271,6 +273,13 @@ const handleTouchEnd = (e: React.TouchEvent) => {
     <span>Začít</span>
     <span className="button-arrow" aria-hidden="true">→</span>
   </button>
+  <button
+  type="button"
+  className="login-action"
+  onClick={() => navigate('/auth')}
+>
+  Přihlásit se
+</button>
 </div>
 
       <p className="legal">
