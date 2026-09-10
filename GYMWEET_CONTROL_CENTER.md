@@ -36,7 +36,11 @@ Hotovo:
 - semantic design tokens
 - design tokens připojené k aplikaci
 - základní komponenty sjednocené s design tokeny
-
+- component foundation token audit dokončen
+- 27 používaných chybějících tokenů doplněno
+- po opravě: 0 chybějících `--gw-*` tokenů
+- build: ✅ PASS
+- lint: ✅ 0 warnings / 0 errors
 ### UI component foundation
 
 Hotovo:
@@ -116,8 +120,17 @@ Aktuální hlavní routy:
 `c25061b`
 
 `Add app shell routing and time foundation`
+### Component foundation design tokens
 
-Oba checkpointy byly otestované a pushnuté na GitHub.
+`5af3ea5`
+
+`Complete component foundation design tokens`
+
+Ověřeno:
+- missing token audit: ✅ PASS
+- build: ✅ PASS
+- lint: ✅ PASS
+Všechny výše uvedené checkpointy byly otestované a pushnuté na GitHub.
 
 ---
 
@@ -204,13 +217,17 @@ Nevymýšlet novou strukturu jen proto, že začal nový chat.
 
 ## ➡️ DALŠÍ KROK
 
-Pokračovat v:
-
 PHASE 0 — FOUNDATION
 
-Nejdříve zkontrolovat tento Control Center a aktuální stav Git branch.
+Další krok:
 
-Potom pokračovat dalším dosud nedokončeným foundation krokem.
+Dark / Light theme foundation
+
+Ověřit a dokončit:
+- aktivaci `data-theme`
+- výchozí theme při startu aplikace
+- správné použití semantic Dark / Light tokenů
+- bez zásahu do již hotových komponent
 
 ---
 
