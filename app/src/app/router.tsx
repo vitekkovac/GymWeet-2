@@ -1,4 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom'
+import App from '../App'
 import { AppShell } from './shell/AppShell'
 
 export const router = createBrowserRouter([
@@ -7,7 +8,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <div>GYMWEET</div>,
+        element: <App />,
       },
       {
         path: '/today',
