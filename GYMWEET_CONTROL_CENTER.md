@@ -6,15 +6,14 @@
 ---
 
 ## 📍 AKTUÁLNÍ FÁZE
-PHASE 0 — FOUNDATION ✅ DOKONČENA
 
-Final audit: ✅ PASS
+PHASE 1 — START / ONBOARDING
 
 Aktuální Git branch:
 
-`phase-0-foundation`
+`phase-1-start-onboarding`
 
----
+Phase 0 — FOUNDATION: ✅ DOKONČENA
 
 ## ✅ POSLEDNÍ OVĚŘENÝ STAV
 
@@ -248,27 +247,25 @@ Nevymýšlet novou strukturu jen proto, že začal nový chat.
 
 ## ➡️ DALŠÍ KROK
 
-PHASE 0 — FOUNDATION ✅ DOKONČENA
+PHASE 1 — START / ONBOARDING
 
-Final audit ověřil:
+Aktuální cíl:
 
-- žádné prázdné source soubory
-- žádné TODO / FIXME / HACK / XXX v source
-- žádné staré Vite / starter reference
-- nepoužívané starter a legacy soubory odstraněny
-- package identity: `gymweet@0.1.0`
-- Dark / Light foundation funkční
-- build: ✅ PASS
-- lint: ✅ 0 warnings / 0 errors
-- Git working tree: ✅ CLEAN
+`A01 — Vítej v GYMWEET`
 
-Další postup:
+Postup:
 
-1. uložit tento finální Phase 0 checkpoint
-2. pushnout ho na GitHub
-3. sloučit `phase-0-foundation` do `main`
-4. vytvořit novou vývojovou branch pro START / ONBOARDING
-5. začít implementací `A01 — Vítej v GYMWEET`
+1. zkontrolovat stávající A01 prototyp v `app/src/App.tsx`
+2. porovnat ho se schváleným GYMWEET Master Designem
+3. zachovat použitelné části
+4. odstranit pouze nesprávné nebo staré části
+5. implementovat produkční A01 v Dark i Light režimu
+6. ověřit responsive layout
+7. build + lint + runtime test
+8. commit + push
+9. aktualizovat CONTROL CENTER
+
+Nevytvářet onboarding znovu naslepo — nejdřív využít a zkontrolovat to, co už v projektu existuje.
 
 ---
 
