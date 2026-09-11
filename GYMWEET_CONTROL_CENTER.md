@@ -249,25 +249,42 @@ Nevymýšlet novou strukturu jen proto, že začal nový chat.
 
 PHASE 1 — START / ONBOARDING
 
-Aktuální cíl:
+Dokončeno:
 
-`A01 — Vítej v GYMWEET`
+- A01 — Vítej v GYMWEET ✅
+- A02 — Plán, který se přizpůsobí tobě ✅
+- A03 — Sleduj progres, který tě posouvá dál ✅
+- A04 — Všechno na jednom místě pro tvůj progress ✅
 
-Postup:
+Ověřeno:
 
-1. zkontrolovat stávající A01 prototyp v `app/src/App.tsx`
-2. porovnat ho se schváleným GYMWEET Master Designem
-3. zachovat použitelné části
-4. odstranit pouze nesprávné nebo staré části
-5. implementovat produkční A01 v Dark i Light režimu
-6. ověřit responsive layout
-7. build + lint + runtime test
-8. commit + push
-9. aktualizovat CONTROL CENTER
+- mobilní runtime ✅
+- swipe mezi onboarding slidy ✅
+- build ✅
+- lint ✅
+- Git checkpointy pushnuté ✅
 
-Nevytvářet onboarding znovu naslepo — nejdřív využít a zkontrolovat to, co už v projektu existuje.
+Další cíl:
 
----
+AUTH FLOW
+
+První krok:
+
+Login — „Přihlas se“
+
+Vývoj pokračuje podle:
+
+1. GYMWEET Master Bible / Blueprint
+2. GYMWEET Master Design
+3. Research Control Layer
+4. Core loop priority
+
+Hlavní research filtr:
+
+„Dělá to GYMWEET lepším trenérem, nebo jen větší aplikací?“
+
+Design onboarding obrazovek je zatím funkční základ.
+Finální premium design polish proběhne před finálním spuštěním aplikace.
 
 ## 🆘 POSTUP PŘI NOVÉM CHATU
 
