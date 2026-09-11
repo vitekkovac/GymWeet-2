@@ -1,8 +1,31 @@
+import { useState } from 'react'
 import './LoginScreen.css'
 import { Button } from '../../components/Button/Button'
 import { Input } from '../../components/Input/Input'
 
 export function LoginScreen() {
+  const [emailError, setEmailError] = useState('')
+const [passwordError, setPasswordError] = useState('')
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  event.preventDefault()
+
+  const formData = new FormData(event.currentTarget)
+  const email = String(formData.get('email') ?? '').trim()
+  const password = String(formData.get('password') ?? '')
+
+  setEmailError('')
+  setPasswordError('')
+
+  if (!email) {
+    setEmailError('Zadej svůj e-mail.')
+  } else if (!email.includes('@')) {
+    setEmailError('Zadej platný e-mail.')
+  }
+
+  if (!password) {
+    setPasswordError('Zadej své heslo.')
+  }
+}
   return (
     <main className="auth-screen">
       <section className="auth-card">
@@ -14,19 +37,23 @@ export function LoginScreen() {
           </p>
         </header>
 
-        <form className="auth-form">
+        <form className="auth-form" onSubmit={handleSubmit} noValidate>
           <Input
             label="E-mail"
+            name="email"
             type="email"
             placeholder="tvuj@email.cz"
             autoComplete="email"
+            error={emailError}
           />
 
           <Input
             label="Heslo"
+            name="password"
             type="password"
             placeholder="Zadej heslo"
             autoComplete="current-password"
+            error={passwordError}
           />
 
           <div className="auth-options">
