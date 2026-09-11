@@ -1,0 +1,119 @@
+.auth-screen {
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  padding: var(--gw-space-6) var(--gw-space-5);
+  background: var(--gw-bg-primary);
+  color: var(--gw-text-primary);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 430px;
+  margin: auto;
+  padding: var(--gw-space-8);
+  border-radius: var(--gw-radius-xl);
+  background: var(--gw-surface-primary);
+  box-shadow: var(--gw-shadow-lg);
+}
+
+.auth-header {
+  margin-bottom: var(--gw-space-8);
+}
+
+.auth-brand {
+  margin: 0 0 var(--gw-space-4);
+  font-size: var(--gw-font-size-sm);
+  font-weight: var(--gw-font-weight-semibold);
+  letter-spacing: 0.18em;
+  color: var(--gw-brand-primary);
+}
+
+.auth-header h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: var(--gw-line-height-tight);
+}
+
+.auth-subtitle {
+  margin: var(--gw-space-3) 0 0;
+  color: var(--gw-text-secondary);
+}
+
+.auth-form {
+  display: grid;
+  gap: var(--gw-space-5);
+}
+
+.auth-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gw-space-3);
+}
+
+.auth-remember {
+  display: flex;
+  align-items: center;
+  gap: var(--gw-space-2);
+  font-size: var(--gw-font-size-sm);
+  color: var(--gw-text-secondary);
+}
+
+.auth-link {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--gw-brand-primary);
+  font: inherit;
+  font-weight: var(--gw-font-weight-semibold);
+  cursor: pointer;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--gw-space-3);
+  margin: var(--gw-space-6) 0;
+  color: var(--gw-text-secondary);
+  font-size: var(--gw-font-size-sm);
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--gw-border-subtle);
+}
+
+.auth-social {
+  display: grid;
+  gap: var(--gw-space-3);
+}
+
+.auth-register {
+  margin: var(--gw-space-6) 0 0;
+  text-align: center;
+  color: var(--gw-text-secondary);
+  font-size: var(--gw-font-size-sm);
+}
+
+@media (max-width: 480px) {
+  .auth-screen {
+    padding: var(--gw-space-4);
+  }
+
+  .auth-card {
+    padding: var(--gw-space-6);
+    box-shadow: none;
+  }
+
+  .auth-header h1 {
+    font-size: 34px;
+  }
+
+  .auth-options {
+    align-items: flex-start;
+  }
+}
