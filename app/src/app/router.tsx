@@ -2,6 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 import App from '../App'
 import { LoginScreen } from '../screens/auth/LoginScreen'
 import { AppShell } from './shell/AppShell'
+import { RegisterScreen } from '../screens/auth/RegisterScreen'
 
 export const router = createBrowserRouter([
   {
@@ -34,7 +35,11 @@ export const router = createBrowserRouter([
     element: <div>Onboarding</div>,
   },
   {
-    path: '/auth',
-    element: <LoginScreen />,
-  },
+  path: '/auth',
+  element: <LoginScreen />,
+},
+{
+  path: '/register',
+  element: <RegisterScreen />,
+},
 ])
