@@ -6,7 +6,8 @@ import { Input } from '../../components/Input/Input'
 export function LoginScreen() {
   const [emailError, setEmailError] = useState('')
 const [passwordError, setPasswordError] = useState('')
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const [showPassword, setShowPassword] = useState(false)
+const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault()
 
   const formData = new FormData(event.currentTarget)
@@ -50,10 +51,19 @@ const [passwordError, setPasswordError] = useState('')
           <Input
             label="Heslo"
             name="password"
-            type="password"
+            type={showPassword ? 'text' : 'password'}
             placeholder="Zadej heslo"
             autoComplete="current-password"
             error={passwordError}
+            trailingContent={
+  <button
+    type="button"
+    className="auth-link"
+    onClick={() => setShowPassword((value) => !value)}
+  >
+    {showPassword ? 'Skrýt' : 'Zobrazit'}
+  </button>
+}
           />
 
           <div className="auth-options">
