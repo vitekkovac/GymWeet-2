@@ -35,12 +35,14 @@ const handleTouchEnd = (e: React.TouchEvent) => {
       </header>
 
       <section className="intro">
-  <h1>
+ <h1>
   {page === 2
     ? 'Plán, který se přizpůsobí tobě'
     : page === 3
       ? 'Sleduj progres, který tě posouvá dál'
-      : 'Vítej v GYMWEET'}
+      : page === 4
+        ? 'Všechno na jednom místě pro tvůj progress'
+        : 'Vítej v GYMWEET'}
 </h1>
 
 <p>
@@ -48,7 +50,9 @@ const handleTouchEnd = (e: React.TouchEvent) => {
     ? 'Chytrý trénink, který reaguje na tvoje možnosti.'
     : page === 3
       ? 'Měj svůj výkon, rekordy a výsledky přehledně na jednom místě.'
-      : 'Tvůj plán. Tvůj progres. Tvoje tempo.'}
+      : page === 4
+        ? 'Trénink, který se přizpůsobí tvému životu. Ne naopak.'
+        : 'Tvůj plán. Tvůj progres. Tvoje tempo.'}
 </p>
 </section>
 
@@ -222,6 +226,45 @@ const handleTouchEnd = (e: React.TouchEvent) => {
 
     <div className="slide-two-phone" aria-label="Náhled obrazovky Progres">
       <strong>Progres</strong>
+    </div>
+  </section>
+)}
+{page === 4 && (
+  <section className="hero-card slide-two">
+    <div className="feature-list">
+      <div className="feature-item">
+        <div className="feature-icon" aria-hidden="true">
+          ⌂
+        </div>
+        <div>
+          <h2>Doma i v gymu</h2>
+          <p>Trénink podle prostředí a vybavení, které máš právě k dispozici.</p>
+        </div>
+      </div>
+
+      <div className="feature-item">
+        <div className="feature-icon" aria-hidden="true">
+          ◎
+        </div>
+        <div>
+          <h2>Všechno propojené</h2>
+          <p>Plán, tréninky, progres a doporučení fungují jako jeden systém.</p>
+        </div>
+      </div>
+
+      <div className="feature-item">
+        <div className="feature-icon" aria-hidden="true">
+          ✦
+        </div>
+        <div>
+          <h2>Chytřejší každý den</h2>
+          <p>GYMWEET se učí z tvých tréninků a pomáhá ti rozhodnout, co dál.</p>
+        </div>
+      </div>
+    </div>
+
+    <div className="slide-two-phone" aria-label="Náhled hlavního dashboardu">
+      <strong>Dnes</strong>
     </div>
   </section>
 )}
