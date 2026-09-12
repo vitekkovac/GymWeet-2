@@ -102,7 +102,11 @@ const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 
         <p className="auth-register">
           Ještě nemáš účet?{' '}
-          <button type="button" className="auth-link">
+          <button
+  type="button"
+  className="auth-link"
+  onClick={() => window.location.assign('/register')}
+>
             Registrovat se
           </button>
         </p>
