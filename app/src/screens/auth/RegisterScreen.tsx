@@ -1,12 +1,14 @@
 import { Button } from '../../components/Button/Button'
 import { Input } from '../../components/Input/Input'
 import { useState } from 'react'
+import { supabase } from '../../config/supabase'
 
 export function RegisterScreen() {
-    const [emailError, setEmailError] = useState('')
+   const [emailError, setEmailError] = useState('')
 const [passwordError, setPasswordError] = useState('')
 const [confirmPasswordError, setConfirmPasswordError] = useState('')
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+const [successMessage, setSuccessMessage] = useState('')
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault()
 
   const formData = new FormData(event.currentTarget)
@@ -35,6 +37,33 @@ const [confirmPasswordError, setConfirmPasswordError] = useState('')
   } else if (password !== confirmPassword) {
     setConfirmPasswordError('Hesla se neshodují.')
   }
+  if (
+  !email ||
+  !email.includes('@') ||
+  !password ||
+  password.length < 8 ||
+  !confirmPassword ||
+  password !== confirmPassword
+) {
+  return
+}
+const { error } = await supabase.auth.signUp({
+  email,
+  password,
+})
+
+if (error) {
+  if (error.message.includes('rate limit')) {
+    setEmailError('Příliš mnoho pokusů. Počkej chvíli a zkus to znovu.')
+  } else {
+    setEmailError(error.message)
+  }
+
+  return
+}
+
+
+setSuccessMessage('Účet byl vytvořen. Zkontroluj svůj e-mail a potvrď registraci.')
 }
 return (
     <main className="auth-screen">
@@ -78,6 +107,11 @@ error={confirmPasswordError}
           <Button type="submit">
             Pokračovat
           </Button>
+          {successMessage && (
+  <p className="auth-success">
+    {successMessage}
+  </p>
+)}
         </form>
 
         <p className="auth-register">
