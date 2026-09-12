@@ -3,6 +3,7 @@ import App from '../App'
 import { LoginScreen } from '../screens/auth/LoginScreen'
 import { AppShell } from './shell/AppShell'
 import { RegisterScreen } from '../screens/auth/RegisterScreen'
+import { ForgotPasswordScreen } from '../screens/auth/ForgotPasswordScreen'
 
 export const router = createBrowserRouter([
   {
@@ -42,4 +43,8 @@ export const router = createBrowserRouter([
   path: '/register',
   element: <RegisterScreen />,
 },
+{
+  path: '/forgot-password',
+  element: <ForgotPasswordScreen />,
+}
 ])

@@ -72,7 +72,11 @@ const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
               <span>Zapamatovat si mě</span>
             </label>
 
-            <button type="button" className="auth-link">
+           <button
+  type="button"
+  className="auth-link"
+  onClick={() => window.location.assign('/forgot-password')}
+>
               Zapomenuté heslo
             </button>
           </div>
