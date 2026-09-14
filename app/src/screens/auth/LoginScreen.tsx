@@ -43,6 +43,8 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   } else {
     setPasswordError('Nesprávný e-mail nebo heslo.')
   }
+}if (!error) {
+  window.location.assign('/today')
 }
 }
   return (
