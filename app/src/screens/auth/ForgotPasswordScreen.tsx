@@ -6,6 +6,7 @@ import { supabase } from '../../config/supabase'
 export function ForgotPasswordScreen() {
   const [email, setEmail] = useState('')
   const [emailError, setEmailError] = useState('')
+const [successMessage, setSuccessMessage] = useState('')
 
  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -19,8 +20,15 @@ export function ForgotPasswordScreen() {
 
   const { error } = await supabase.auth.resetPasswordForEmail(email)
 
-  if (error) {
-  setEmailError(error.message)
+ if (error) {
+    if (!error) {
+  setSuccessMessage('Odkaz pro obnovení hesla jsme poslali na tvůj e-mail.')
+}
+  if (error.message.toLowerCase().includes('rate limit')) {
+    setEmailError('Příliš mnoho pokusů. Počkej chvíli a zkus to znovu.')
+  } else {
+    setEmailError('Odkaz se nepodařilo odeslat. Zkus to prosím znovu.')
+  }
 }
 }
   }
@@ -51,6 +59,11 @@ error={emailError}
           <Button type="submit">
             Odeslat odkaz
           </Button>
+          {successMessage && (
+  <p className="auth-success">
+    {successMessage}
+  </p>
+)}
         </form>
 
         <p className="auth-register">
