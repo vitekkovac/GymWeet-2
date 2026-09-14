@@ -8,9 +8,35 @@ export function LoginScreen() {
   const [emailError, setEmailError] = useState('')
 const [passwordError, setPasswordError] = useState('')
   const [showPassword, setShowPassword] = useState(false)
+  const [resendMessage, setResendMessage] = useState('')
+ const handleResendConfirmation = async () => {
+  const form = document.querySelector('.auth-form') as HTMLFormElement | null
+  const formData = form ? new FormData(form) : null
+  const email = String(formData?.get('email') ?? '').trim()
+
+  if (!email) {
+    setEmailError('Zadej svůj e-mail.')
+    return
+  }
+
+  const { error } = await supabase.auth.resend({
+    type: 'signup',
+    email,
+  })
+
+  if (error) {
+    if (error.message.toLowerCase().includes('rate limit')) {
+      setResendMessage('Příliš mnoho pokusů. Počkej chvíli a zkus to znovu.')
+    } else {
+      setResendMessage('Potvrzovací e-mail se nepodařilo odeslat.')
+    }
+    return
+  }
+
+  setResendMessage('Potvrzovací e-mail jsme poslali znovu.')
+}
 const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault()
-
   const formData = new FormData(event.currentTarget)
   const email = String(formData.get('email') ?? '').trim()
   const password = String(formData.get('password') ?? '')
@@ -40,6 +66,7 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   if (error) {
   if (error.message.toLowerCase().includes('email not confirmed')) {
     setPasswordError('Nejdřív potvrď svůj e-mail.')
+    setResendMessage('Potvrzovací e-mail můžeš poslat znovu.')
   } else {
     setPasswordError('Nesprávný e-mail nebo heslo.')
   }
@@ -85,7 +112,21 @@ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   </button>
 }
           />
+{resendMessage && (
+  <>
+    <p className="auth-success">
+      {resendMessage}
+    </p>
 
+    <button
+      type="button"
+      className="auth-link"
+      onClick={handleResendConfirmation}
+    >
+      Poslat potvrzovací e-mail znovu
+    </button>
+  </>
+)}
           <div className="auth-options">
             <label className="auth-remember">
               <input type="checkbox" />
