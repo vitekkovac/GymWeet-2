@@ -1,12 +1,13 @@
 import { Button } from '../../components/Button/Button'
 import { Input } from '../../components/Input/Input'
 import { useState } from 'react'
+import { supabase } from '../../config/supabase'
 
 export function ForgotPasswordScreen() {
   const [email, setEmail] = useState('')
   const [emailError, setEmailError] = useState('')
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+ const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     if (!email) {
@@ -14,9 +15,14 @@ export function ForgotPasswordScreen() {
     } else if (!email.includes('@')) {
       setEmailError('Zadej platný e-mail.')
     } else {
-      setEmailError('')
-      // Submit the form
-    }
+  setEmailError('')
+
+  const { error } = await supabase.auth.resetPasswordForEmail(email)
+
+  if (error) {
+  setEmailError(error.message)
+}
+}
   }
 
   return (
