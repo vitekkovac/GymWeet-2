@@ -2,12 +2,13 @@ import { useState } from 'react'
 import './LoginScreen.css'
 import { Button } from '../../components/Button/Button'
 import { Input } from '../../components/Input/Input'
+import { supabase } from '../../config/supabase'
 
 export function LoginScreen() {
   const [emailError, setEmailError] = useState('')
 const [passwordError, setPasswordError] = useState('')
   const [showPassword, setShowPassword] = useState(false)
-const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
   event.preventDefault()
 
   const formData = new FormData(event.currentTarget)
@@ -26,6 +27,23 @@ const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
   if (!password) {
     setPasswordError('Zadej své heslo.')
   }
+
+  if (!email || !email.includes('@') || !password) {
+  return
+}
+
+  const { error } = await supabase.auth.signInWithPassword({
+    email,
+    password
+  })
+
+  if (error) {
+  if (error.message.toLowerCase().includes('email not confirmed')) {
+    setPasswordError('Nejdřív potvrď svůj e-mail.')
+  } else {
+    setPasswordError('Nesprávný e-mail nebo heslo.')
+  }
+}
 }
   return (
     <main className="auth-screen">
